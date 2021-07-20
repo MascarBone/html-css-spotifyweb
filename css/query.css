@@ -1,0 +1,35 @@
+@media screen and (max-width: 1600px) {
+    .playlist {
+        width: calc(100% / 4 - 20px);
+    }
+
+    main {
+        background-color: brown;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .playlist {
+        width: calc(100% / 2 - 20px);
+    }
+
+    main {
+        background-color: yellowgreen;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .playlist {
+        width: 100%;
+    }
+
+    main {
+        background-color: royalblue;
+    }
+
+    /* Per evitare che il menu di navigazione si sovrapponga senza un ordine */
+    .navigation {
+        flex-direction: column;
+        align-content: center;
+    }
+}
