@@ -18,7 +18,7 @@
     <!-- Contenitore della pagina -->
     <div class="container">
         <!-- Header, che si posiziona come un menù laterale sul lato sinistro della pagina -->
-        <header class="container-header">
+        <header>
             <!-- Menù di navigazione, diviso in 4 sezioni -->
             <nav class="sidebar">
                 <!-- Contenitore per il logo di Spotify -->
@@ -115,7 +115,14 @@
 
                 <!-- Sezione delle ultime playlist riprodotte -->
                 <section class="main-content__played">
-                    <h1>Recently Played</h1>
+                    
+                    <!--                        
+                    PRIMA RIGA
+                     -->
+                    
+                    <!-- Titolo della serie di playlist -->
+                    <h2>Recently Played</h2>
+                    
                     <div class="wrap-playlist">
                         <!-- Playlist contente l'immagine ed il testo -->
                         <div class="playlist">
@@ -186,24 +193,131 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div>                  
+                   
                 </section>
 
                 <!-- Sezione delle playlist create per l'utente -->
-                <section>
+                <section class="main-content__for-user">
 
+                    <!--
+                    SECONDA RIGA
+                     -->
+                    
+                    <!-- Titolo della serie di playlist -->
+                    <h2>Recently Played</h2>
+                    <p>Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti.</p>
+
+                    <div class="wrap-playlist">
+
+                        <!-- Playlist contente l'immagine ed il testo -->
+                        <div class="playlist">
+                            <!-- Contenitore dell'immagine e dell'icona che appare con l'hover -->
+                            <div class="playlist__thumbnail">
+                                <img src="img/radar.jpeg" alt="Relase radar">
+                                <i class="far fa-play-circle"></i>
+                            </div>
+                            <!-- Contenitore del testo al di sotto della thumbnail -->
+                            <div class="playlist__text-content">
+                                <h2>Heave Metal</h2>
+                                <h3>Subtitle</h3>
+                            </div>
+                        </div>
+
+                        <div class="playlist">
+                            <div class="playlist__thumbnail">
+                                <img src="img/mixdaily.jpeg" alt="Daily Mix">
+                                <i class="far fa-play-circle"></i>
+                            </div>
+                            <div class="playlist__text-content">
+                                <h2>Heave Metal</h2>
+                                <h3>Subtitle</h3>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <!-- Sezione degli artisti più popolari -->
-                <section>
+                <section class="main-contento__popular">
+                     <!--
+                    TERZA RIGA
+                    -->
 
+                    <!-- Titolo della serie di playlist -->
+                    <h2>Recently Played</h2>
+                    <p>Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti.</p>
+                        
+                    <div class="wrap-playlist">
+                        <!-- Playlist contente l'immagine ed il testo -->
+                        <div class="playlist">
+                            <!-- Contenitore dell'immagine e dell'icona che appare con l'hover -->
+                            <div class="playlist__thumbnail">
+                                <img src="img/youg.jpeg" alt="youg">
+                                <i class="far fa-play-circle"></i>
+                            </div>
+                            <!-- Contenitore del testo al di sotto della thumbnail -->
+                            <div class="playlist__text-content">
+                                <h2>Heave Metal</h2>
+                                <h3>Subtitle</h3>
+                            </div>
+                        </div>
+
+                        <div class="playlist">
+                            <div class="playlist__thumbnail">
+                                <img src="img/einaudi.jpeg" alt="Ludovico Einaudi">
+                                <i class="far fa-play-circle"></i>
+                            </div>
+                            <div class="playlist__text-content">
+                                <h2>Heave Metal</h2>
+                                <h3>Subtitle</h3>
+                            </div>
+                        </div>
+                    </div>
                 </section>
+
             </div>
         </main>
 
         <footer>
             <div class="footer-content">
+                <div class="playbar playbar_left">
+                    <div class="playbar__content">
+                        <img src="img/sinister.jpeg" alt="Sinister ">
+                        <div>
+                            <h3>Sinister</h3>
+                            <p>Brano Nome</p>
+                        </div>
+                    </div>
+                    <div class="playbar__content">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-folder"></i>
+                    </div>
+                </div>
                 
+                <div class="playbar playbar_central">
+                    <div class="playbar__content">
+                        <i class="fas fa-random"></i>
+                        <i class="fas fa-step-backward"></i>
+                        <i class="far fa-play-circle"></i>
+                        <i class="fas fa-step-forward"></i>
+                        <i class="fas fa-redo-alt"></i>
+                    </div>
+                    <div class="playbar__content">
+
+                    </div>
+                </div>
+
+                <div class="playbar playbar_right">
+                    <div class="playbar__content">
+                        <i class="fas fa-list-ul"></i>
+                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-volume-up"></i>
+                        <!-- <i class="fas fa-volume-mute"></i> -->
+                    </div>
+                    <div class="playbar__content">
+
+                    </div>
+                </div>
             </div>
         </footer>
 

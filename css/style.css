@@ -9,22 +9,30 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+header {    
+    height: calc(100vh - 100px);
+    width: 200px;
+    background-color: black;
+}
 main {
     width: calc(100% - 200px);
     height: calc(100vh - 100px);    
     background-color: rgb(20, 25, 34);
+    overflow-y: auto;
+}
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(40, 40, 40);
 }
 
 .container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .sidebar {
-    height: calc(100vh - 100px);
-    width: 200px;
-    background-color: black;
-
+    height: 100%;
     /* COLORE del testo da rimuovere */
     color: white;
 
@@ -127,6 +135,7 @@ main {
 .playlist {
     text-align: center;
     margin-right: 20px;
+    margin-bottom: 20px;
     width: calc(100% / 6 - 20px);
     min-width: 200px;
 
@@ -161,3 +170,33 @@ main {
     display: block;
 }
 
+.footer-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.playbar__content {
+    display: flex;
+    align-items: center;
+}
+.playbar_left {
+    background-color: rgb(173, 255, 47);
+}
+
+.playbar_central {
+    background-color: salmon;
+    flex-grow: 1;
+}
+
+.playbar_right {
+    background-color: seagreen;
+}
+
+.playbar img {
+    height: 60px;
+}
+
+.playbar div > * {
+    margin: 0 10px;
+}
