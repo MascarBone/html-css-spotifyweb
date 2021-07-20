@@ -57,7 +57,7 @@ main {
 
 
 .main-content {
-    margin: 0 30px;
+    padding: 0 30px;
 }
 .main-banner {
     width: 100%;
@@ -125,6 +125,7 @@ main {
     margin-top: 30px;
 }
 .playlist {
+    flex: 1 1 300px;
     text-align: center;
     margin-right: 20px;
 }
@@ -133,7 +134,8 @@ main {
     cursor: pointer;
 }
 .playlist__thumbnail img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 350px;
 }
 .playlist__text-content h3 {
     color: rgb(125, 127, 132);
