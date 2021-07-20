@@ -11,12 +11,23 @@ body {
 header {
     background-color: hotpink;
 }
-.top-bar__logo {
-    height: 100px;
+
+.top-bar {
+    width: 200px;
+    height: calc(100vh - 100px);
+}
+.top-bar__menu{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    align-content: flex-start;
+}
+.top-bar__menu > * {
+    width: 100%;
 }
 
 .top-bar__logo img {
-    height: 100%;
+    width: 200px;
 }
 
 .menu-newlist i {
@@ -25,6 +36,7 @@ header {
     background-color: rgb(163, 163, 163);
     vertical-align: middle;
 }
+
 
 .menu-profile__account img {
    width: 40px;
