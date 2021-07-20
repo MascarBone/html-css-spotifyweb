@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link al FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>    
+
+    <!-- Link al CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Spotify Web App</title>
+</head>
+<body>
+    <!-- Contenitore della pagina -->
+    <div class="container">
+        <!-- Header, che si posiziona come un menù laterale sul lato sinistro della pagina -->
+        <header class="container-header">
+            <!-- Contenuto all'interno dell'Header -->
+            <div class="top-bar">
+                <!-- Contenitore per il logo di Spotify
+                Utile per l'adattamento con il responsive -->
+                <div class="top-bar__logo">
+                    <img src="img/logo.svg" alt="">
+                </div>
+                <!-- Menù di navigazione, diviso in 4 sezioni -->
+                <nav class="top-bar__menu">
+                    <!-- Parte in alto del menù, con le tre funzionalità per cambiare pagina -->
+                    <div class="menu-bar">
+                        <ul>
+                            <li class="menu-bar__home">Home</li>
+                            <li class="menu-bar__search">Cerca</li>
+                            <li class="menu-bar__library">La tua libreria</li>
+                        </ul>
+                    </div>
+                    <!-- Funzionalità per creare una nuova playlist -->
+                    <div class="menu-newlist">
+                        <h1>Playlist</h1>
+                        <div>
+                            <a href="#">
+                                <i class="fas fa-plus"></i>
+                                <span>Crea Playlist</span>
+                            </a>                            
+                        </div>
+                    </div>
+                    <!-- Lista delle playlist create -->
+                    <div class="menu-playlist">
+                        <ul>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                            <li>Nome Playlist</li>
+                        </ul>
+                    </div>
+                    <!-- Link al download dell'app ed al profilo utente -->
+                    <div class="menu-profile">
+                        <div class="menu-profile__download">
+                            <a href="#">
+                                <i class="far fa-arrow-alt-circle-down"></i>
+                                <span>Installa app</span>
+                            </a>
+                        </div>
+                        
+                        <hr>
+
+                        <div class="menu-profile__account">
+                            <a href="#">
+                                <img src="img/profile.svg" alt="">
+                                <span>John Doe</span>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+
+        </main>
+
+        <footer>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: brown;
+}
+
+header {
+    background-color: hotpink;
+}
+.top-bar__logo {
+    height: 100px;
+}
+
+.top-bar__logo img {
+    height: 100%;
+}
+
+.menu-newlist i {
+    font-size: 2em;
+    padding: 10px;
+    background-color: rgb(163, 163, 163);
+    vertical-align: middle;
+}
+
+.menu-profile__account img {
+   width: 40px;
+   height: 40px;
+   background-color: rgb(128, 128, 128);
+   border-radius: 50%;
+   vertical-align: middle;
+}
