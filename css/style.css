@@ -24,6 +24,7 @@ footer {
     width: 100%;
     height: 100px;
     background-color: rgb(40, 40, 40);
+    overflow-x: hidden;
 }
 
 .container {
@@ -83,10 +84,11 @@ footer {
     color: white; 
     /* altezza e padding per creare l'effetto arrotondamento    */
     height: 40px;
-    padding: 0 20px;
+    padding: 0 30px;
 
-    margin-right: 20px;
+    margin-right: 40px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .main-content {
@@ -105,6 +107,7 @@ footer {
     position: relative;
     height: 30px;
     margin: 20px;
+    cursor: pointer;
 }
 .navigation__item a {
     text-decoration: none;
@@ -163,22 +166,16 @@ footer {
     transform: translate(-50%, -50%);
     font-size: 5em;
 }
-.playlist__thumbnail:hover img{
-    opacity: 60%;
-}
-.playlist__thumbnail:hover i{
-    display: block;
-}
+
 
 .footer-content {
     display: flex;
     align-items: center;
     height: 100%;
 }
-.playbar img {
+.playbar_side img {
     height: 50px;
 }
-
 /* Barra per indicare il progresso della riproduzione e del volume */
 /*
 Dimensioni generiche delle barre totali
@@ -193,11 +190,11 @@ Dimensioni generiche delle barre totali
  }
  /* Barra di riproduzione */
  .bar_song {  
-     width: 400px;
+     width: 70%;
  }
  /* Barra del volume */
  .bar_vol {
-     width: 200px;
+     width: 180px;
  }
  /* Colorazione progress generico delle barre */
  .bar_progress {
@@ -207,27 +204,36 @@ Dimensioni generiche delle barre totali
      left: 0;
  }
 
+/* Margini tra le icone del footer e colore testo generale */
 .playbar__content > * {
     margin: 0 10px;    
     color: white;
 }
+/* Flex per tutte e tre le sezione gestito allo stesso modo */
 .playbar__content {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+/* Sezioni laterali leggermente spostate verso il basso rispetto a quella centrale */
 .playbar_side {
     margin-top: 20px;
 }
+/* Colore grigio per i 3 elementi della sezione sinistra */
 .playbar_side:first-child h4,
 .playbar_side:first-child i {
     color: grey;
 }
+/* Grow per la sezione centrale, così da prendere tutto lo spazio disponibile */
 .playbar_central {
     flex-grow: 1;
 }
+/* Dimensioni delle varie icone */
 .playbar_central .playbar__content:first-child {
+    font-size: 1.2em;
+}
+.playbar_central .fa-play-circle {
     font-size: 2em;
 }
 .playbar_central .playbar__content:last-child {
@@ -235,3 +241,44 @@ Dimensioni generiche delle barre totali
     margin-top: 10px;
 }
 
+/* HOVER PER IL MAIN: BANNER, NAV E PLAYLIST */
+.main-banner__button:hover {
+    transform: scale(1.2);
+}
+.navigation__item:hover a {
+    color: white;
+}
+.playlist__thumbnail:hover img{
+    opacity: 60%;
+}
+.playlist__thumbnail:hover i{
+    display: block;
+}
+
+/* HOVER PER IL FOOTER */
+.playbar__content h4:hover{
+    text-decoration:underline;
+}
+.playbar_side:first-child > * :hover {
+    color: white;
+}
+.playbar__content:first-child:hover {
+    cursor: pointer;
+}
+.playbar_central .fa-play-circle:hover {
+    transform:scale(1.2);
+}
+.bar:hover .bar_progress {
+    background-color: rgb(173, 255, 47);
+}
+.bar:hover .bar_progress::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+}
