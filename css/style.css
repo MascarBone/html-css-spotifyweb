@@ -84,7 +84,16 @@ footer {
 .sidebar-top__menu img {
     height: 30px;
     vertical-align: middle;
+    filter: invert(0.5);
 }
+/* Per colorare di bianco la home che è selezionata */
+.sidebar-top__menu a:first-child img {
+    filter: invert(0);
+}
+.sidebar-top__menu a:first-child {
+    color: white;
+}
+/* Per aggiungere il trattino laterale verde */
 .sidebar-top__menu a {
     position: relative;
 }
@@ -304,6 +313,12 @@ Dimensioni generiche delle barre totali
 
 
 /* HOVER PER L'HEADER */
+.sidebar a:hover {
+    color: white;
+}
+.sidebar a:hover img{
+    filter: invert(0);
+}
 
 /* HOVER PER IL MAIN: BANNER, NAV E PLAYLIST */
 .main-banner__button:hover {
