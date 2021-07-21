@@ -10,15 +10,17 @@ body {
 }
 
 header {    
-    height: calc(100vh - 100px);
     width: 200px;
+    height: 100%;
     background-color: black;
+    float: left;
 }
 main {
-    width: calc(100% - 200px);
-    height: calc(100vh - 100px);    
+    width: calc(100% - 200px);  
+    height: 100%;
     background-color: rgb(20, 25, 34);
     overflow-y: auto;
+    float: left;
 }
 footer {
     width: 100%;
@@ -27,11 +29,23 @@ footer {
     overflow-x: hidden;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
+.content {    
+    height: calc(100vh - 100px);
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
 }
 
+.mrg-bot10 {
+    margin-bottom: 10px;
+}.mrg-bot20 {
+    margin-bottom: 20px;
+}
+/* Dimensione del menù laterale sinistro */
 .sidebar {
     height: 100%;
     /* COLORE del testo da rimuovere */
@@ -41,18 +55,63 @@ footer {
     display: flex;
     flex-direction: column;
 }
+/* Attributi degli elementi contenuti nel menù */
+.sidebar a {    
+    color: rgb(125, 127, 132);
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.sidebar ul {
+    list-style: none;
+}
+
 .sidebar-top {
     flex-grow: 1;
 }
+/* Impostazioni del logo */
+.sidebar-top__logo {
+    margin-bottom: 20px;
+}
 .sidebar-top__logo img {
     width: 100%;
+}
+/* Impostazione del menu */
+.sidebar-top__menu {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar-top__menu img {
+    height: 30px;
+    vertical-align: middle;
+}
+.sidebar-top__menu a {
+    position: relative;
+}
+.sidebar-top__menu a:first-child::before{
+    content: "";    
+    position: absolute; 
+    display: block;
+    width: 3px;
+    height: 100%;       
+    top: 0;
+    left: 0;
+    transform: translate(-15px, 0);
+    background-color: rgb(173, 255, 47);
+}
+/* Impostazioni al pulsante per aggiungere una playlist */
+.sidebar-top__newlist h1 {
+    font-size: 1.5em;
+    color: white;
 }
 .sidebar-top__newlist i {
     font-size: 2em;
     padding: 10px;
     background-color: rgb(163, 163, 163);
     vertical-align: middle;
+    color: black;
 }
+/* Impostazioni per il menù inferiore dell'account */
 .sidebar-bot__account img {
    width: 40px;
    height: 40px;
@@ -60,8 +119,10 @@ footer {
    border-radius: 50%;
    vertical-align: middle;
 }
-
-
+.sidebar-bot__account a {
+    color: white;
+    font-weight: 600;
+}
 
 
 
@@ -83,9 +144,8 @@ footer {
     font-size: 1.2em;
     color: white; 
     /* altezza e padding per creare l'effetto arrotondamento    */
-    height: 40px;
-    padding: 0 30px;
-
+    height: max-content;
+    padding: 10px 30px;
     margin-right: 40px;
     text-transform: uppercase;
     cursor: pointer;
@@ -126,7 +186,7 @@ footer {
     top: 100%;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: rgb(173, 255, 47);;
+    background-color: rgb(173, 255, 47);
 }
 
 
@@ -240,6 +300,10 @@ Dimensioni generiche delle barre totali
     font-size: 0.8em;
     margin-top: 10px;
 }
+
+
+
+/* HOVER PER L'HEADER */
 
 /* HOVER PER IL MAIN: BANNER, NAV E PLAYLIST */
 .main-banner__button:hover {

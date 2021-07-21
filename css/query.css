@@ -32,4 +32,11 @@
         flex-direction: column;
         align-content: center;
     }
+    
+    .main-banner {
+        text-align: center;
+    }
+    .main-banner__button {
+        margin: 0;
+    }
 }

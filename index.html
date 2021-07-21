@@ -17,79 +17,91 @@
 <body>
     <!-- Contenitore della pagina -->
     <div class="container">
-        <!-- Header, che si posiziona come un menù laterale sul lato sinistro della pagina -->
-        <header>
-            <!-- Menù di navigazione, diviso in 4 sezioni -->
-            <nav class="sidebar">
-                <!-- Contenitore per il logo di Spotify -->
-                <div class="sidebar-top">
-                    <!-- Utile per l'adattamento con il responsive -->
-                    <div class="sidebar-top__logo">
-                        <img src="img/logo.svg" alt="">
-                    </div>
-                    <!-- Parte in alto del menù, con le tre funzionalità per cambiare pagina -->
-                    <div class="sidebar-top__menu">
-                        <ul>
-                            <li class="menu-bar__home">Home</li>
-                            <li class="menu-bar__search">Cerca</li>
-                            <li class="menu-bar__library">La tua libreria</li>
-                        </ul>
-                    </div>
-                    <!-- Funzionalità per creare una nuova playlist -->
-                    <div class="sidebar-top__newlist">
-                        <h1>Playlist</h1>
-                        <div>
+        <div class="content clearfix">
+            <!-- Header, che si posiziona come un menù laterale sul lato sinistro della pagina -->
+            <header>
+                <!-- Menù di navigazione, diviso in 4 sezioni -->
+                <nav class="sidebar">
+                    <!-- Contenitore per il logo di Spotify -->
+                    <div class="sidebar-top">
+                        <!-- Utile per l'adattamento con il responsive -->
+                        <div class="sidebar-top__logo">
+                            <img src="img/logo.svg" alt="">
+                        </div>
+                        <!-- Parte in alto del menù, con le tre funzionalità per cambiare pagina -->
+                        <div class="sidebar-top__menu mrg-bot20">
+                            <!-- <ul>
+                                <li class="menu-bar__home"><a href="#"><img src="img/home.svg" alt=""><span>Home</span></a></li>
+                                <li class="menu-bar__search"><a href="#">Cerca</a></li>
+                                <li class="menu-bar__library"><a href="#">La tua libreria</a></li>
+                            </ul> -->
                             <a href="#">
-                                <i class="fas fa-plus"></i>
-                                <span>Crea Playlist</span>
+                                    <img src="img/home.svg" alt="logo home">
+                                    <span>Home</span>
                             </a>                            
+                            <a href="#">
+                                <img src="img/search.svg" alt="logo home">
+                                <span>Cerca</span>
+                            </a>
+                            <a href="#">
+                                <img src="img/libreria.svg" alt="logo home">
+                                <span>La tua libreria</span>
+                            </a>
+                        </div>
+                        <!-- Funzionalità per creare una nuova playlist -->
+                        <div class="sidebar-top__newlist mrg-bot20">
+                            <h1 class="mrg-bot10">Playlist</h1>
+                            <div class="mrg-bot20">
+                                <a href="#">
+                                    <i class="fas fa-plus"></i>
+                                    <span>Crea Playlist</span>
+                                </a>                            
+                            </div>
+                        </div>
+                        <!-- Lista delle playlist create -->
+                        <div class="sidebar-top__playlist">
+                            <ul>
+                                <li class="mrg-bot10"><a href="#">Nome Playlist</a></li>
+                                <li class="mrg-bot10"><a href="#">Nome Playlist</a></li>
+                                <li class="mrg-bot10"><a href="#">Nome Playlist</a></li>
+                                <li class="mrg-bot10"><a href="#">Nome Playlist</a></li>
+                                <li class="mrg-bot10"><a href="#">Nome Playlist</a></li>
+                                <li class="mrg-bot10"><a href="#">Nome Playlist</a></li>
+                                <li class="mrg-bot10"><a href="#">Nome Playlist</a></li>
+                                <li class="mrg-bot10"><a href="#">Nome Playlist</a></li>
+                                <li class="mrg-bot10"><a href="#">Nome Playlist</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <!-- Lista delle playlist create -->
-                    <div class="sidebar-top__playlist">
-                        <ul>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                            <li>Nome Playlist</li>
-                        </ul>
+
+                    <!-- Link al download dell'app ed al profilo utente -->
+                    <div class="sidebar-bot">
+                        <div class="sidebar-bot__download">
+                            <a href="#">
+                                <i class="far fa-arrow-alt-circle-down"></i>
+                                <span>Installa app</span>
+                            </a>
+                        </div>
+                        
+                        <hr>
+
+                        <div class="sidebar-bot__account">
+                            <a href="#">
+                                <img src="img/profile.svg" alt="">
+                                <span>John Doe</span>
+                            </a>
+                        </div>
+                        
                     </div>
+                </nav>
+            </header>
+
+            <main>
+                                
+                <!-- Banner per effettuare l'upgrade -->
+                <div class="main-banner">
+                    <button class="main-banner__button">Effettua l'upgrade</button>
                 </div>
-
-                <!-- Link al download dell'app ed al profilo utente -->
-                <div class="sidebar-bot">
-                    <div class="sidebar-bot__download">
-                        <a href="#">
-                            <i class="far fa-arrow-alt-circle-down"></i>
-                            <span>Installa app</span>
-                        </a>
-                    </div>
-                    
-                    <hr>
-
-                    <div class="sidebar-bot__account">
-                        <a href="#">
-                            <img src="img/profile.svg" alt="">
-                            <span>John Doe</span>
-                        </a>
-                    </div>
-                    
-                </div>
-            </nav>
-        </header>
-
-        <main>
-            <!-- Banner per effettuare l'upgrade -->
-            <div class="main-banner">
-                <button class="main-banner__button">Effettua l'upgrade</button>
-            </div>
-
-            <!-- Contenitore della gallery e del menù in alto -->
-            <div class="main-content">
                 <!-- Menù in alto della pagina -->
                 <nav class="navigation">
                     <div class="navigation__item">
@@ -113,170 +125,174 @@
                     </div>                    
                 </nav>
 
-                <!-- Sezione delle ultime playlist riprodotte -->
-                <section class="main-content__played">
-                    
-                    <!--                        
-                    PRIMA RIGA
-                     -->
-                    
-                    <!-- Titolo della serie di playlist -->
-                    <h2>Recently Played</h2>
-                    
-                    <div class="wrap-playlist">
-                        <!-- Playlist contente l'immagine ed il testo -->
-                        <div class="playlist">
-                            <!-- Contenitore dell'immagine e dell'icona che appare con l'hover -->
-                            <div class="playlist__thumbnail">
-                                <img src="img/metal_lifting.jpg" alt="Heavy metal">
-                                <i class="far fa-play-circle"></i>
-                            </div>
-                            <!-- Contenitore del testo al di sotto della thumbnail -->
-                            <div class="playlist__text-content">
-                                <h2>Heave Metal</h2>
-                                <h3>Subtitle</h3>
-                            </div>
-                        </div>
+
+                <!-- Contenitore della gallery -->
+                <div class="main-content">
+                    <!-- Sezione delle ultime playlist riprodotte -->
+                    <section class="main-content__played">
                         
-                        <div class="playlist">
-                            <div class="playlist__thumbnail">
-                                <img src="img/stranger.jpeg" alt="Stranger Things">
-                                <i class="far fa-play-circle"></i>
-                            </div>
-                            <div class="playlist__text-content">
-                                <h2>Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</h2>
-                                <h3>Kyle Dixon & Michael Stein</h3>
-                            </div>
-                        </div>
-
-                        <div class="playlist">
-                            <div class="playlist__thumbnail">
-                                <img src="img/aquietplace.jpeg" alt="A quiet place">
-                                <i class="far fa-play-circle"></i>
-                            </div>
-                            <div class="playlist__text-content">
-                                <h2>A quiet place</h2>
-                                <h3>Subtitle</h3>
-                            </div>
-                        </div>
-
-                        <div class="playlist">
-                            <div class="playlist__thumbnail">
-                                <img src="img/split.jpeg" alt="Split">
-                                <i class="far fa-play-circle"></i>
-                            </div>
-                            <div class="playlist__text-content">
-                                <h2>Split</h2>
-                                <h3>Subtitle</h3>
-                            </div>
-                        </div>
-
-                        <div class="playlist">
-                            <div class="playlist__thumbnail">
-                                <img src="img/cure.jpeg" alt="A cure for wellness">
-                                <i class="far fa-play-circle"></i>
-                            </div>
-                            <div class="playlist__text-content">
-                                <h2>A cure for wellness</h2>
-                                <h3>Subtitle</h3>
-                            </div>
-                        </div>
-
-                        <div class="playlist">
-                            <div class="playlist__thumbnail">
-                                <img src="img/sinister.jpeg" alt="Sinister">
-                                <i class="far fa-play-circle"></i>
-                            </div>
-                            <div class="playlist__text-content">
-                                <h2>Sinister</h2>
-                                <h3>Subtitle</h3>
-                            </div>
-                        </div>
-
-                    </div>                  
-                   
-                </section>
-
-                <!-- Sezione delle playlist create per l'utente -->
-                <section class="main-content__for-user">
-
-                    <!--
-                    SECONDA RIGA
-                     -->
-                    
-                    <!-- Titolo della serie di playlist -->
-                    <h2>Recently Played</h2>
-                    <p>Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti.</p>
-
-                    <div class="wrap-playlist">
-
-                        <!-- Playlist contente l'immagine ed il testo -->
-                        <div class="playlist">
-                            <!-- Contenitore dell'immagine e dell'icona che appare con l'hover -->
-                            <div class="playlist__thumbnail">
-                                <img src="img/radar.jpeg" alt="Relase radar">
-                                <i class="far fa-play-circle"></i>
-                            </div>
-                            <!-- Contenitore del testo al di sotto della thumbnail -->
-                            <div class="playlist__text-content">
-                                <h2>Heave Metal</h2>
-                                <h3>Subtitle</h3>
-                            </div>
-                        </div>
-
-                        <div class="playlist">
-                            <div class="playlist__thumbnail">
-                                <img src="img/mixdaily.jpeg" alt="Daily Mix">
-                                <i class="far fa-play-circle"></i>
-                            </div>
-                            <div class="playlist__text-content">
-                                <h2>Heave Metal</h2>
-                                <h3>Subtitle</h3>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Sezione degli artisti più popolari -->
-                <section class="main-contento__popular">
-                     <!--
-                    TERZA RIGA
-                    -->
-
-                    <!-- Titolo della serie di playlist -->
-                    <h2>Recently Played</h2>
-                    <p>Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti.</p>
+                        <!--                        
+                        PRIMA RIGA
+                        -->
                         
-                    <div class="wrap-playlist">
-                        <!-- Playlist contente l'immagine ed il testo -->
-                        <div class="playlist">
-                            <!-- Contenitore dell'immagine e dell'icona che appare con l'hover -->
-                            <div class="playlist__thumbnail">
-                                <img src="img/youg.jpeg" alt="youg">
-                                <i class="far fa-play-circle"></i>
+                        <!-- Titolo della serie di playlist -->
+                        <h2>Recently Played</h2>
+                        
+                        <div class="wrap-playlist">
+                            <!-- Playlist contente l'immagine ed il testo -->
+                            <div class="playlist">
+                                <!-- Contenitore dell'immagine e dell'icona che appare con l'hover -->
+                                <div class="playlist__thumbnail">
+                                    <img src="img/metal_lifting.jpg" alt="Heavy metal">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                                <!-- Contenitore del testo al di sotto della thumbnail -->
+                                <div class="playlist__text-content">
+                                    <h2>Heave Metal</h2>
+                                    <h3>Subtitle</h3>
+                                </div>
                             </div>
-                            <!-- Contenitore del testo al di sotto della thumbnail -->
-                            <div class="playlist__text-content">
-                                <h2>Heave Metal</h2>
-                                <h3>Subtitle</h3>
+                            
+                            <div class="playlist">
+                                <div class="playlist__thumbnail">
+                                    <img src="img/stranger.jpeg" alt="Stranger Things">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                                <div class="playlist__text-content">
+                                    <h2>Stranger Things, Vol. 1(a Netflix Original Series Soundtrack)</h2>
+                                    <h3>Kyle Dixon & Michael Stein</h3>
+                                </div>
+                            </div>
+
+                            <div class="playlist">
+                                <div class="playlist__thumbnail">
+                                    <img src="img/aquietplace.jpeg" alt="A quiet place">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                                <div class="playlist__text-content">
+                                    <h2>A quiet place</h2>
+                                    <h3>Subtitle</h3>
+                                </div>
+                            </div>
+
+                            <div class="playlist">
+                                <div class="playlist__thumbnail">
+                                    <img src="img/split.jpeg" alt="Split">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                                <div class="playlist__text-content">
+                                    <h2>Split</h2>
+                                    <h3>Subtitle</h3>
+                                </div>
+                            </div>
+
+                            <div class="playlist">
+                                <div class="playlist__thumbnail">
+                                    <img src="img/cure.jpeg" alt="A cure for wellness">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                                <div class="playlist__text-content">
+                                    <h2>A cure for wellness</h2>
+                                    <h3>Subtitle</h3>
+                                </div>
+                            </div>
+
+                            <div class="playlist">
+                                <div class="playlist__thumbnail">
+                                    <img src="img/sinister.jpeg" alt="Sinister">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                                <div class="playlist__text-content">
+                                    <h2>Sinister</h2>
+                                    <h3>Subtitle</h3>
+                                </div>
+                            </div>
+
+                        </div>                  
+                    
+                    </section>
+
+                    <!-- Sezione delle playlist create per l'utente -->
+                    <section class="main-content__for-user">
+
+                        <!--
+                        SECONDA RIGA
+                        -->
+                        
+                        <!-- Titolo della serie di playlist -->
+                        <h2>Recently Played</h2>
+                        <p>Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti.</p>
+
+                        <div class="wrap-playlist">
+
+                            <!-- Playlist contente l'immagine ed il testo -->
+                            <div class="playlist">
+                                <!-- Contenitore dell'immagine e dell'icona che appare con l'hover -->
+                                <div class="playlist__thumbnail">
+                                    <img src="img/radar.jpeg" alt="Relase radar">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                                <!-- Contenitore del testo al di sotto della thumbnail -->
+                                <div class="playlist__text-content">
+                                    <h2>Heave Metal</h2>
+                                    <h3>Subtitle</h3>
+                                </div>
+                            </div>
+
+                            <div class="playlist">
+                                <div class="playlist__thumbnail">
+                                    <img src="img/mixdaily.jpeg" alt="Daily Mix">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                                <div class="playlist__text-content">
+                                    <h2>Heave Metal</h2>
+                                    <h3>Subtitle</h3>
+                                </div>
                             </div>
                         </div>
+                    </section>
 
-                        <div class="playlist">
-                            <div class="playlist__thumbnail">
-                                <img src="img/einaudi.jpeg" alt="Ludovico Einaudi">
-                                <i class="far fa-play-circle"></i>
+                    <!-- Sezione degli artisti più popolari -->
+                    <section class="main-content__popular">
+                        <!--
+                        TERZA RIGA
+                        -->
+
+                        <!-- Titolo della serie di playlist -->
+                        <h2>Recently Played</h2>
+                        <p>Pi&uacute; ascolti, pi&uacute; accurati saranno i suggerimenti.</p>
+                            
+                        <div class="wrap-playlist">
+                            <!-- Playlist contente l'immagine ed il testo -->
+                            <div class="playlist">
+                                <!-- Contenitore dell'immagine e dell'icona che appare con l'hover -->
+                                <div class="playlist__thumbnail">
+                                    <img src="img/youg.jpeg" alt="youg">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                                <!-- Contenitore del testo al di sotto della thumbnail -->
+                                <div class="playlist__text-content">
+                                    <h2>Heave Metal</h2>
+                                    <h3>Subtitle</h3>
+                                </div>
                             </div>
-                            <div class="playlist__text-content">
-                                <h2>Heave Metal</h2>
-                                <h3>Subtitle</h3>
+
+                            <div class="playlist">
+                                <div class="playlist__thumbnail">
+                                    <img src="img/einaudi.jpeg" alt="Ludovico Einaudi">
+                                    <i class="far fa-play-circle"></i>
+                                </div>
+                                <div class="playlist__text-content">
+                                    <h2>Heave Metal</h2>
+                                    <h3>Subtitle</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
 
-            </div>
-        </main>
+                </div>
+            </main>
+        </div>
 
         <footer>
             <div class="footer-content">
