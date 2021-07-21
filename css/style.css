@@ -71,10 +71,13 @@ footer {
 }
 /* Impostazioni del logo */
 .sidebar-top__logo {
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .sidebar-top__logo img {
     width: 100%;
+}
+.sidebar-top__logo img:last-child {
+    display: none;
 }
 /* Impostazione del menu */
 .sidebar-top__menu {

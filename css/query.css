@@ -18,25 +18,57 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .playlist {
         width: 100%;
     }
-
     main {
         background-color: royalblue;
     }
-
     /* Per evitare che il menu di navigazione si sovrapponga senza un ordine */
     .navigation {
         flex-direction: column;
         align-content: center;
-    }
-    
+    }    
     .main-banner {
         text-align: center;
     }
     .main-banner__button {
         margin: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    main {
+        width: calc(100% - 50px);  
+    }
+    header {
+        width: 50px;
+    }
+
+    .sidebar {
+        padding: 0;
+        align-items: center;
+    }
+    .sidebar-top__logo img:first-child {
+        display: none;
+    }
+    .sidebar-top__logo img:last-child {
+        display: inline-block;
+    }
+    .sidebar-top__menu a {
+        margin-bottom: 20px;
+    }
+    .sidebar span {
+        display: none;
+    }
+    .sidebar-top__newlist {
+        display: none;
+    }
+    .sidebar-top__playlist {
+        display: none;
+    }
+    .sidebar-bot {
+        text-align: center;
     }
 }
