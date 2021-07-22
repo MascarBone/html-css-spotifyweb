@@ -19,11 +19,9 @@
 }
 
 @media screen and (max-width: 768px) {
-    .playlist {
-        width: 100%;
-    }
     main {
         background-color: royalblue;
+        width: calc(100% - 50px);
     }
     /* Per evitare che il menu di navigazione si sovrapponga senza un ordine */
     .navigation {
@@ -36,18 +34,13 @@
     .main-banner__button {
         margin: 0;
     }
-}
-
-@media screen and (max-width: 576px) {
-    main {
-        width: calc(100% - 50px);  
-    }
     header {
         width: 50px;
     }
-
+    .pdd-10-15 {
+        padding: 10px 10px;
+    }
     .sidebar {
-        padding: 0;
         align-items: center;
     }
     .sidebar-top__logo img:first-child {
@@ -55,6 +48,7 @@
     }
     .sidebar-top__logo img:last-child {
         display: inline-block;
+        width: 30px;
     }
     .sidebar-top__menu a {
         margin-bottom: 20px;
@@ -71,4 +65,15 @@
     .sidebar-bot {
         text-align: center;
     }
+}
+
+@media screen and (max-width: 576px) {
+    .playlist {
+        width: 100%;
+        margin-right: 0;
+    }
+    .wrap-playlist {
+        /* justify-content: center; */
+    }
+    
 }
