@@ -2,25 +2,16 @@
     .playlist {
         width: calc(100% / 4 - 20px);
     }
-
-    main {
-        background-color: brown;
-    }
 }
 
 @media screen and (max-width: 1200px) {
     .playlist {
         width: calc(100% / 2 - 20px);
     }
-
-    main {
-        background-color: yellowgreen;
-    }
 }
 
 @media screen and (max-width: 768px) {
     main {
-        background-color: royalblue;
         width: calc(100% - 50px);
     }
     /* Per evitare che il menu di navigazione si sovrapponga senza un ordine */
@@ -38,7 +29,7 @@
         width: 50px;
     }
     .pdd-10-15 {
-        padding: 10px 10px;
+        padding: 0;
     }
     .sidebar {
         align-items: center;
@@ -71,9 +62,6 @@
     .playlist {
         width: 100%;
         margin-right: 0;
-    }
-    .wrap-playlist {
-        /* justify-content: center; */
     }
     
 }

@@ -43,7 +43,8 @@ footer {
 
 .mrg-bot10 {
     margin-bottom: 10px;
-}.mrg-bot20 {
+}
+.mrg-bot20 {
     margin-bottom: 20px;
 }
 .pdd-10-15{
@@ -229,7 +230,14 @@ footer {
     background-color: rgb(173, 255, 47);
 }
 
-
+.main-content h1 {
+    font-size: 3em;
+}
+.main-content p {
+    font-size: 1.1em;
+    font-weight: 600;
+    color:  rgb(125, 127, 132);
+}
 .wrap-playlist {
     display: flex;
     flex-wrap: wrap;
