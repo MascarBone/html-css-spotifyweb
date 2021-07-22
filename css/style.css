@@ -31,8 +31,9 @@ footer {
 
 .content {    
     height: calc(100vh - 100px);
-    /* display: flex;
-    flex-wrap: wrap; */
+    
+    /* Overflow in combinazione con la min-height nella sidebar */
+    overflow: hidden;
 }
 .clearfix::after {
     content: '';
@@ -48,9 +49,12 @@ footer {
 /* Dimensione del menù laterale sinistro */
 .sidebar {
     height: 100%;
-    /* COLORE del testo da rimuovere */
-    color: white;
 
+    /* Il min-height alla sidebar serve in combinazione con l'overflow sul div
+    .content, così che quando si restringe in verticale, il contenuto bottom
+    della sidebar viene nascosto */
+    min-height:400px;
+    
     padding: 10px 15px;
     display: flex;
     flex-direction: column;
@@ -68,6 +72,15 @@ footer {
 
 .sidebar-top {
     flex-grow: 1;
+    /* Il display flex serve così da poter dare ad ogni elemento
+    una sua dimensione (flex-direction:column è per spostare
+    tutti in elenco verticale), altrimenti non viene trovata
+    un'altezza e non funzionerebbe l'overflow-y */
+    display: flex;
+    flex-direction: column;
+    /* L'overflow hidden viene usato per permettere all'elemento sidebar-bot
+    di continuare a scorrere verso l'alto sopra al resto della sidebar-top. */
+    overflow: hidden;
 }
 /* Impostazioni del logo */
 .sidebar-top__logo {
@@ -122,6 +135,12 @@ footer {
     background-color: rgb(163, 163, 163);
     vertical-align: middle;
     color: black;
+}
+.sidebar-top__playlist {
+    /* L'overflow-y: auto permette di creare una scrollbar
+    solo per questo elemento, nel momento in cui
+    la sidebar-bot inizia a sovrastare la sidebar-top */
+    overflow-y: auto;
 }
 /* Impostazioni per il menù inferiore dell'account */
 .sidebar-bot__account img {
